@@ -11,7 +11,7 @@ try:
     curr_dir = os.getcwd()
 
     # load the player data
-    file = os.path.join(curr_dir, "player_df.pickle")
+    file = os.path.join(curr_dir, "multiplayer_rankings.pickle")
     tracker = Tracker(players=file)
 except FileNotFoundError:
     # create a new tracker
@@ -51,7 +51,7 @@ def add_game():
     curr_dir = os.getcwd()
 
     # save the player data
-    file = os.path.join(curr_dir, "player_df.pickle")
+    file = os.path.join(curr_dir, "multiplayer_rankings.pickle")
     tracker.save_player_data(file, save_full_history=True)
 
 
